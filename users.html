@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trainee Task2</title>
+	<link rel="stylesheet" href="css/css_reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+</head>
+<body>
+    <table>
+        <caption>Users</caption>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>password</th>
+                <th>is admin</th>
+            </tr>
+        </thead>
+        <tbody data-bind="template: { name: 'user-template', foreach: users }">
+        </tbody>
+    </table>
+
+<script type="text/html" id="user-template">
+    <tr>
+        <td data-bind="text: id"></td>
+        <td data-bind="text: email"></td>
+        <td data-bind="text: password"></td>
+        <td data-bind="text: isAdmin"></td>
+        <td><a href="#" data-bind="click: $root.editUser">Edit</a></td>
+        <td><a href="#" data-bind="click: $root.deleteUser">Delete</a></td>
+    </tr>
+</script>
+
+    <div id="dialog" data-bind="with: selectedItem">
+    <form>
+        <p>Id: <span data-bind="text: id"></span></p>
+        <p>Email: <span data-bind="text: email"></span></p>
+        <p>Password: <input data-bind="value: password"/></p>
+        <p>Is admin: <select data-bind="options:$root.isAdmin, value: isAdmin, optionText:'isAdmin'"></select></p>
+        <a href="#" data-bind="click: $root.saveChanges">Save</a>
+        </form>
+    </div>
+	<script src="scripts/jquery-1.11.2.js"></script>
+	<script src='scripts/knockout-3.3.0.js'></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

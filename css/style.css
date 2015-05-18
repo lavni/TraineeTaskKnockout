@@ -1,0 +1,144 @@
+body{
+	height: 100%;
+	background: rgba(0,0,0,0.9) url(../images/bg.png) repeat;
+	font-family: Verdana;
+}
+
+/*forms*/
+.login-form {
+	width: 300px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -150px;
+}
+.login-form h1 {
+	background-color: #282830;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 16px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.login-form fieldset {
+	background: rgba(255,255,255, 0.9);
+	border-radius: 0 0 5px 5px;
+	padding: 20px;
+	position: relative;
+}
+
+.login-form fieldset:before {
+	background-color: #282830;
+	content: "";
+	height: 8px;
+	left: 50%;
+	margin: -4px 0 0 -4px;
+	position: absolute;
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 8px;
+	overflow: hidden;
+}
+.login-form input {
+	font-size: 14px;
+	box-shadow: none;
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+	border: 1px solid #dcdcdc;
+	padding: 12px 20px;
+	width: 200px;
+}
+.login-form input[type="email"] {
+	border-radius: 3px 3px 0 0;
+}
+.login-form input[type="password"] {
+	border-top: none;
+	border-radius: 0px 0px 3px 3px;
+}
+.login-form input[type="button"] {
+	background: #8FB5C0;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+}
+#autoris input[type="button"]{
+	margin-top: 62px;
+}
+.login-form input[type="button"]:hover { 
+	background: #6DB1C5; 
+}
+/* end forms */
+
+
+
+/*users*/
+table{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	background: rgba(255,255,255,0.5);
+}
+caption{
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+tr{
+	height: 25px;
+	padding-bottom:5px;
+}
+thead{
+	font-weight: bold;
+	margin-top: 50px;
+}
+th, td{
+	text-align: left;
+	vertical-align: middle;
+}
+a{
+	display: inline-block;
+	padding: 5px;
+	color: #00a;
+	padding-left: 10px;
+	text-decoration: none;
+}
+a:hover{
+	background: #C7C7E2;
+}
+#dialog{
+	position: absolute;
+	background: rgb(255,255,200);
+	width: 400px;
+	height:200px;
+	left:50%;
+	margin-left:-200px;
+	top: 20%;
+	padding: 40px 40px 40px 100px;
+	z-index: 1000;
+}
+#dialog p{
+	display: block;
+	margin-bottom: 5px;
+}
+#dialog input{
+	width:80px;
+}
+.none{
+	display: none;
+}
